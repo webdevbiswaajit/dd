@@ -1,0 +1,253 @@
+#footer {
+    overflow: hidden;
+    padding-top: 15rem;
+    padding-bottom: 5rem;
+    position: relative;
+    .middle {
+        .min_title {
+            font-weight: 700;
+            margin-top: 0;
+            color: #131313;
+            font-size: 0.82857rem;
+            line-height: 1.42857em;
+        }
+        .text_link {
+            color: #131313;
+            cursor: pointer;
+            font-weight: 400;
+            font-size: 14px;
+        }
+        .address {
+            font-weight: 400;
+            font-size: 14px;
+            color: #131313;
+            line-height: 1.42857em;
+        }
+        .link {
+            margin-bottom: 0.5rem;
+            color: #131313;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.42857em;
+        }
+    }
+    .right {
+        ul li {
+            cursor: pointer;
+            margin: 1.7rem 0;
+            .icon {
+                margin-right: 1.5rem;
+                font-size: 2rem;
+                color: #9b9b9b;
+            }
+            .fz {
+                font-weight: 600;
+                font-size: 1.14286rem;
+                color: #131313;
+            }
+            &:first-child {
+                margin: 0;
+            }
+        }
+    }
+    // more part
+    .Top {
+        position: absolute;
+        background: #c10206;
+        top: -10%;
+        right: 0;
+        color: #fff;
+        width: 4.5rem;
+        height: 16.5rem;
+        a {
+            color: inherit;
+            transform: rotate(-90deg) translateX(-5rem);
+            display: block;
+            text-transform: capitalize;
+            -webkit-transform: rotate(-90deg) translateX(-5rem);
+            -moz-transform: rotate(-90deg) translateX(-5rem);
+            -ms-transform: rotate(-90deg) translateX(-5rem);
+            -o-transform: rotate(-90deg) translateX(-5rem);
+        }
+        // _________
+        .hscroll-line {
+            top: 50%;
+            right: 13%;
+            height: 2px;
+            position: absolute;
+            overflow: hidden;
+            width: 55px;
+            transform: rotate(90deg);
+            tranform-origin: 50% 50%;
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+        }
+        .hscroll-line::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            content: "";
+        }
+        .hscroll-line:before {
+            background: #fff;
+        }
+        .hscroll-line::after {
+            background: #fff;
+            animation: slide-up 3s reverse infinite;
+            -webkit-animation: slide-up 3s reverse infinite;
+        }
+        // animation
+        @keyframes slide-up {
+            0% {
+                transform: translate3d(-300%, 0, 0);
+                -webkit-transform: translate3d(-300%, 0, 0);
+                -moz-transform: translate3d(-300%, 0, 0);
+                -ms-transform: translate3d(-300%, 0, 0);
+                -o-transform: translate3d(-300%, 0, 0);
+            }
+            60% {
+                transform: translate3d(100%, 0, 0);
+                -webkit-transform: translate3d(100%, 0, 0);
+                -moz-transform: translate3d(100%, 0, 0);
+                -ms-transform: translate3d(100%, 0, 0);
+                -o-transform: translate3d(100%, 0, 0);
+            }
+            100% {
+                transform: translate3d(100%, 0, 0);
+                -webkit-transform: translate3d(100%, 0, 0);
+                -moz-transform: translate3d(100%, 0, 0);
+                -ms-transform: translate3d(100%, 0, 0);
+                -o-transform: translate3d(100%, 0, 0);
+            }
+        }
+    }
+}
+
+// #######################
+// footer bottom
+.footer_bottom {
+    position: relative;
+    background: #333333;
+    padding-top: 2.8rem;
+    padding-bottom: 2.8rem;
+    .copyright {
+        p {
+            color: #fff;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.42857em;
+        }
+    }
+    .footer_bottom_list {
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        ul li {
+            flex: 2;
+        }
+        ul li a {
+            color: #fff;
+            font-weight: 400;
+            font-size: 1.005rem;
+            line-height: 1.42857em;
+        }
+    }
+}
+
+// social part
+.social_list {
+    position: absolute;
+    top: -228%;
+    left: 0;
+    width: 5rem;
+    height: 295px;
+    background: #333333;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    ul li {
+        padding-bottom: 3.57143rem;
+    }
+    ul li span {
+        .icon {
+            font-weight: 400;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+// start responsive part
+@media (max-width: 1200px) {
+    .footer_logo {
+        text-align: center;
+    }
+}
+
+@media (max-width: 1199px) {
+    .social_list {
+        top: -214%;
+    }
+    .footer_bottom .footer_bottom_list ul li a {
+        font-size: 0.99rem;
+    }
+    .footer_bottom .copyright p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 991px) {
+    #footer {
+        padding-top: 4rem;
+        padding-bottom: 0;
+    }
+    .footer_bottom {
+        display: none;
+    }
+    .footer_logo {
+        margin-bottom: 2rem;
+    }
+    #footer .Top {
+        top: 35%;
+    }
+}
+
+@media (max-width: 767px) {
+    #footer .Top {
+        top: 53%;
+        width: 3.5rem;
+        height: 12rem;
+    }
+    #footer .Top .hscroll-line {
+        right: -20%;
+        width: 78px;
+        top: 42%;
+    }
+}
+
+@media (max-width: 575px) {
+    #footer .Top {
+        top: 68%;
+        left: 0;
+    }
+    #footer .right ul li .icon {
+        font-size: 1rem;
+    }
+    .middle {
+        text-align: center;
+    }
+    #footer .right ul li {
+        width: 200px;
+    }
+    #footer .list_of_items {
+        margin-left: 30%;
+        margin-top: 2rem;
+    }
+}
+
+// end of responsive part

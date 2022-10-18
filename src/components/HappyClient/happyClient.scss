@@ -1,0 +1,117 @@
+#happyClients {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 7rem;
+    // left
+    .linear_bg {
+        z-index: 3;
+        background: linear-gradient(130.27deg, #86000f 0%, #c10206 100%);
+        .client_left {
+            padding: 6rem;
+            .top_title {
+                margin-left: 2.3rem;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 17px;
+                letter-spacing: 0.09em;
+                position: relative;
+                color: #ffffff;
+                // before
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 21px;
+                    height: 2px;
+                    background-color: #e2dbdb;
+                    top: 45%;
+                    left: -4%;
+                }
+            }
+            .main_title {
+                width: 264px;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 26px;
+                line-height: 32px;
+                letter-spacing: 0.01em;
+                color: #ffffff;
+            }
+            .text {
+                width: 647px;
+                font-weight: 300;
+                font-size: 1.57143rem;
+                line-height: 1.22727em;
+                letter-spacing: normal;
+                color: #ffffff;
+            }
+        }
+    }
+    // right
+    .client_img {
+        width: 50%;
+        height: 699px;
+        position: absolute;
+        top: 11%;
+        right: 0;
+        object-fit: cover;
+        z-index: -1;
+    }
+    .row>* {
+        padding-left: 0;
+    }
+}
+
+// start responsive part
+@media (max-width: 1500px) {
+    #happyClients .linear_bg .client_left .top_title::before {
+        left: -6.2%;
+    }
+}
+
+@media (max-width: 1200px) {
+    #happyClients {
+        padding-bottom: 0;
+    }
+    #happyClients .linear_bg .client_left {
+        padding: 6rem 4rem;
+    }
+    #happyClients .linear_bg .client_left .top_title::before {
+        left: -6%;
+    }
+}
+
+@media (max-width: 1199px) {
+    #happyClients .linear_bg .client_left .text {
+        width: 100%;
+    }
+    #happyClients .client_img {
+        display: none;
+    }
+    .parallax-outer {
+        padding: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    #happyClients .linear_bg .client_left .top_title::before {
+        left: -9%;
+    }
+    #happyClients .img_wrap {
+        text-align: center;
+    }
+    #happyClients .linear_bg .client_left .text {
+        width: 110%;
+    }
+}
+
+@media (max-width: 479px) {
+    #happyClients .linear_bg .client_left .top_title::before {
+        left: -16%;
+    }
+    #happyClients .linear_bg .client_left .text {
+        font-size: 1.3rem;
+    }
+}
+
+// end of responsive part

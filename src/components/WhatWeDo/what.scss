@@ -1,0 +1,199 @@
+#whatWeDo {
+    overflow: hidden;
+    background: #fff;
+    padding: 0 6rem;
+    margin-bottom: 6.42857rem;
+    margin-top: 13.57143rem;
+    .title {
+        margin-left: 2.9rem;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.09em;
+        color: #333333;
+        text-transform: uppercase;
+        position: relative;
+    }
+    .title::before {
+        content: "";
+        position: absolute;
+        width: 21px;
+        height: 2px;
+        background-color: #e2dbdb;
+        top: 45%;
+        left: -8%;
+    }
+    .sub_title {
+        width: 170px;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 32px;
+        letter-spacing: 0.01em;
+        color: #333333;
+    }
+    .main_para {
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 27px;
+        color: #4a4a4a;
+        width: 217px;
+    }
+    .discover {
+        cursor: pointer;
+        text-transform: capitalize;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 16px;
+        position: relative;
+        color: #000000;
+        letter-spacing: 0px;
+        transition: 0.3s;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -ms-transition: 0.3s;
+        -o-transition: 0.3s;
+        margin-left: 0.2rem;
+        //before
+        &::before {
+            content: "";
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background-color: #fc3f3f;
+            top: 55%;
+            left: 20%;
+            transition: 0.3s;
+            -webkit-transition: 0.3s;
+            -moz-transition: 0.3s;
+            -ms-transition: 0.3s;
+            -o-transition: 0.3s;
+        }
+        &:hover::before {
+            width: 60px;
+            right: -105%;
+        }
+        &:hover {
+            letter-spacing: 0.5px;
+        }
+    }
+    // content
+    .content {
+        .svg_img {
+            width: 71px;
+            height: 55px;
+            object-fit: cover;
+        }
+        .timeline {
+            font-weight: 700;
+            font-size: 26px;
+            line-height: 32px;
+            letter-spacing: 0.01em;
+            color: #333333;
+        }
+        .sub_para {
+            width: 293px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: #4a4a4a;
+        }
+    }
+}
+
+// ##### start responsive ######
+@media (max-width: 1600px) {
+    #whatWeDo .title::before {
+        left: -13%;
+    }
+    #whatWeDo .discover::before {
+        left: 34%;
+    }
+}
+
+@media (max-width: 1200px) {
+    #whatWeDo {
+        margin-bottom: 3rem;
+    }
+    #whatWeDo .title {
+        margin-left: 2rem;
+    }
+    #whatWeDo .title::before {
+        left: -11%;
+    }
+    #whatWeDo .discover::before {
+        left: 36%;
+    }
+}
+
+@media (max-width: 1199px) {
+    #whatWeDo {
+        margin-bottom: 0;
+    }
+    #whatWeDo .title::before {
+        left: -6%;
+    }
+    #whatWeDo .sub_title,
+    #whatWeDo .main_para {
+        width: 100%;
+    }
+    #whatWeDo {
+        margin-top: 9rem;
+    }
+    #whatWeDo .discover::before {
+        left: 15%;
+    }
+}
+
+@media (max-width: 991px) {
+    #whatWeDo .discover::before {
+        left: 21%;
+    }
+    #whatWeDo .content .sub_para {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    #whatWeDo .discover::before {
+        left: 24%;
+    }
+    #whatWeDo .content .timeline {
+        font-size: 16px;
+    }
+    #whatWeDo .discover {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 699px) {
+    #whatWeDo .title::before {
+        left: -13%;
+    }
+    #whatWeDo .discover::before {
+        left: 31%;
+    }
+}
+
+@media (max-width: 575px) {
+    #whatWeDo {
+        padding: 0 2rem;
+    }
+    #whatWeDo .discover::before {
+        left: 30%;
+    }
+}
+
+@media (max-width: 479px) {
+    #whatWeDo .discover::before {
+        left: 36%;
+    }
+}
+
+@media (max-width: 414px) {
+    #whatWeDo .discover::before {
+        left: 43%;
+    }
+}
+
+// ##### end of responsive ######
